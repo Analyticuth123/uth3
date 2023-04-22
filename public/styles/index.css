@@ -10,14 +10,24 @@
   text-align: center;
 }
 
-#msg-input, #msg-response, #msg-send {
+#msg-input, #msg-response {
   font-weight: 300;
   font-size: small;
+  color: #fbfbfb;
+  font-family: Cursive;
+
+}
+
+#msg-send {
+  font-weight: 300;
+  font-size: small;
+
 }
 
 #msg-input {
   width: 80%;
   height: 30px;
+
 }
 
 #msg-send {
@@ -25,9 +35,13 @@
 }
 
 #msg-response {
-  border: 2px solid burlywood;
+  border: black solid 1px;
+  color: hsl(300, 12%, 97%);
+  background: hsl(244, 22%, 28%);
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-left: 8rem;
+  margin-right: 7.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
