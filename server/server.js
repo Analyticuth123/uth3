@@ -3,7 +3,7 @@
  * The `express` module is a popular Node.js web framework used for building web applications and APIs. 
  * The `app` object is an instance of the `express` application that is used to define routes and middleware for the application.
  * */
-require('dotenv').config();
+require('dotenv').config({ path: '.env' });
 const express = require('express');
 const app = express();
 
@@ -24,12 +24,17 @@ const openai = new OpenAIApi(configuration);
  * These lines of code are connecting to a MongoDB database using the `mongoose` library. The `mongoose.connect()` method is used to establish a connection to the MongoDB database specified in the `MONGO_URI` environment variable. The `useNewUrlParser` and `useUnifiedTopology` options are passed to the method to ensure that the connection is established using the latest MongoDB driver.
  * Once the connection is established, the `mongoose` library can be used to define and interact with database models. 
  * */
+
+
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 /**
  * These lines of code are defining a Mongoose schema for the `Response` model. The `mongoose.Schema` method is used to create a new schema object, which is then used to define the structure of the `Response` model. The schema defines five properties: `prompt`, `status`, `created`, `message`, and `total_tokens`, each with a specified data type. 
  * */
+
+ 
 const Schema = mongoose.Schema;
 const responseSchema = new Schema({
     prompt: { type: String },
